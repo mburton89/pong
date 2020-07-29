@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalMovementSpeed: 10
-  maxYValue: 4.5
+  maxYValue: 5
   _upKey: 273
   _downKey: 274
   ballhitXDirection: -1
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalMovementSpeed: 10
-  maxYValue: 4.5
+  maxYValue: 5
   _upKey: 119
   _downKey: 115
   ballhitXDirection: 1
