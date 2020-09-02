@@ -46,10 +46,10 @@ public class Ball : MonoBehaviour
             HandlePointScored(false);
         }
 
-        if (transform.position.y > maxYPosition || transform.position.y < -maxYPosition)
-        {
-            direction = new Vector3(direction.x, -direction.y, 0);
-        }
+        //if (transform.position.y > maxYPosition || transform.position.y < -maxYPosition)
+        //{
+        //    direction = new Vector3(direction.x, -direction.y, 0);
+        //}
     }
 
     void HandlePointScored(bool player1Scored)
