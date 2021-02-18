@@ -2544,7 +2544,7 @@ PrefabInstance:
     - target: {fileID: 6428520633228220488, guid: cb631a813c088c14db5ce17af19c77e7,
         type: 3}
       propertyPath: m_Name
-      value: Ball - JustinB
+      value: Ball - Justin "Baller" B
       objectReference: {fileID: 0}
     - target: {fileID: 6428520633228220489, guid: cb631a813c088c14db5ce17af19c77e7,
         type: 3}
@@ -2599,6 +2599,21 @@ PrefabInstance:
     - target: {fileID: 6428520633228220489, guid: cb631a813c088c14db5ce17af19c77e7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428520633228220535, guid: cb631a813c088c14db5ce17af19c77e7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.09620416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428520633228220535, guid: cb631a813c088c14db5ce17af19c77e7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428520633228220535, guid: cb631a813c088c14db5ce17af19c77e7,
+        type: 3}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
