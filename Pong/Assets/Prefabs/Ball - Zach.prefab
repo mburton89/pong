@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44b65846e461254eb073461b5a6c5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.1
+  movementSpeed: 1
   direction: {x: -1, y: 0, z: 0}
   maxXPosition: 8.75
   maxYPosition: 4.8
@@ -5277,7 +5277,7 @@ ParticleSystemForceField:
     m_RotationAttractionCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.85
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5384,7 +5384,7 @@ ParticleSystemForceField:
     m_VectorFieldSpeedCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.57
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5437,7 +5437,7 @@ ParticleSystemForceField:
     m_VectorFieldAttractionCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.81
       minScalar: 0
       maxCurve:
         serializedVersion: 2
