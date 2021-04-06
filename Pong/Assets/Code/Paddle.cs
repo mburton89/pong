@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     public float verticalMovementSpeed;
-    public float maxYValue;
+    public float maxYPosition;
     public KeyCode _upKey;
     public KeyCode _downKey;
     public int ballhitXDirection;
@@ -19,11 +19,11 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(_upKey) && transform.position.y < maxYValue)
+        if (Input.GetKey(_upKey) && transform.position.y < maxYPosition)
         {
             MoveUp();
         }
-        else if (Input.GetKey(_downKey) && transform.position.y > -maxYValue)
+        else if (Input.GetKey(_downKey) && transform.position.y > -maxYPosition)
         {
             MoveDown();
         }

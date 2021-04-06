@@ -8,7 +8,6 @@ public class Ball : MonoBehaviour
     public Vector3 direction;
 
     public float maxXPosition;
-    public float maxYPosition;
 
     void Start()
     {
