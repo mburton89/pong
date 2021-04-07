@@ -31,6 +31,7 @@ public class BallSpawner : MonoBehaviour
     {
         Ball newBall = Instantiate(ballPrefab);
         newBall.direction = new Vector3(serveXDirection, 0, 0);
+        SoundManager.Instance.serve.Play();
     }
 
     public void DelayServe(int newServeXDirection)

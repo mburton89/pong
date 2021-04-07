@@ -6,7 +6,9 @@ public class SizePowerup : Powerup
 {
     public override void GetCollected()
     {
-        FindObjectOfType<Ball>().transform.localScale *= 4;
-
+        if (FindObjectOfType<Ball>().transform.localScale.x < 201)
+        {
+            FindObjectOfType<Ball>().transform.localScale *= 2;
+        }
     }
 }

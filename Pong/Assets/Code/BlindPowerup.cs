@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedPowerup : Powerup
+public class BlindPowerup : Powerup
 {
     public override void GetCollected()
     {
-        FindObjectOfType<Ball>().movementSpeed *= 1.5f;
+        Scoreboard.Instance.BlindPlayers();
     }
 }

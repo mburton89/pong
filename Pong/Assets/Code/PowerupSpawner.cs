@@ -4,14 +4,30 @@ using UnityEngine;
 
 public class PowerupSpawner : MonoBehaviour
 {
+    public static PowerupSpawner Instance;
+
     public float maxX;
     public float maxY;
     public float spawnRate;
     public List<Powerup> powerups;
 
+    void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         StartCoroutine(SpawnCo());
+    }
+
+    public void ClearPowerups()
+    {
+        Powerup[] allPowerUps = FindObjectsOfType<Powerup>();
+        foreach (Powerup powerup in allPowerUps)
+        {
+            Destroy(powerup.gameObject);
+        }
     }
 
     void SpawnRandomPowerup()
@@ -23,7 +39,8 @@ public class PowerupSpawner : MonoBehaviour
 
         Vector2 spawnPosition = new Vector2(randX, randY);
 
-        Instantiate(powerups[randIndex], spawnPosition, transform.rotation, transform);   
+        Powerup powerup = Instantiate(powerups[randIndex], spawnPosition, transform.rotation, transform) as Powerup;
+        Destroy(powerup.gameObject, spawnRate * 2);
     }
 
     private IEnumerator SpawnCo()

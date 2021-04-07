@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    public int ballhitYDirection;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Ball>())
@@ -16,7 +14,7 @@ public class Wall : MonoBehaviour
 
     void HitBall(Ball ball)
     {
-        Vector3 hitDirection = new Vector3(ball.direction.x, ballhitYDirection, 0);
+        Vector3 hitDirection = new Vector3(ball.direction.x, -ball.direction.y, 0);
         ball.GetHit(hitDirection);
     }
 }

@@ -29,12 +29,12 @@ public class Paddle : MonoBehaviour
         }
     }
 
-    void MoveUp()
+    public void MoveUp()
     {
         transform.position += Vector3.up * verticalMovementSpeed * Time.deltaTime;
     }
 
-    void MoveDown()
+    public void MoveDown()
     {
         transform.position += Vector3.down * verticalMovementSpeed * Time.deltaTime;
     }

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public abstract class Powerup : MonoBehaviour
 {
-    public AudioSource collectedSound;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GetCollected();
+        SoundManager.Instance.collect.Play();
         Destroy(gameObject);
     }
 

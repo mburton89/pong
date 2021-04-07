@@ -9,16 +9,16 @@ public class Ball : MonoBehaviour
 
     public float maxXPosition;
 
-    void Start()
-    {
-        
-    }
+    [HideInInspector] public float previousXPosition;
+    [HideInInspector] public float currentXPosition;
 
-    // Update is called once per frame
     void Update()
     {
         Move();
         CheckBoundaries();
+
+        previousXPosition = currentXPosition;
+        currentXPosition = transform.position.x;
     }
 
     void Move()
@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
     public void GetHit(Vector3 hitDirection)
     {
         direction = hitDirection;
-        print(direction);
+        SoundManager.Instance.hit.Play();
     }
 
     void CheckBoundaries()
@@ -53,6 +53,7 @@ public class Ball : MonoBehaviour
 
     void HandlePointScored(bool player1Scored)
     {
+        SoundManager.Instance.ballDestroy.Play();
         Destroy(gameObject);
     }
 }

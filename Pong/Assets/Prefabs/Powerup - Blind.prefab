@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2786719454570920656}
   - component: {fileID: 2786719454570920659}
-  - component: {fileID: 2786719454570920661}
   - component: {fileID: 4484117271369658196}
+  - component: {fileID: 6874632645843856802}
   m_Layer: 0
-  m_Name: Powerup - Speed
+  m_Name: Powerup - Blind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cafff5299ee72f349a024dc30ff15dbc, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.9505663, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6085615, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2786719454570920661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2786719454570920660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483082d5dd13844bcb44e42b191755bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectedSound: {fileID: 2786719454837123014}
 --- !u!61 &4484117271369658196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,6 +111,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &6874632645843856802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786719454570920660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640a0cd3140d54e1e99388ff80966144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedSound: {fileID: 2786719454837123014}
 --- !u!1 &2786719454837123001
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 2786719454837123015}
   - component: {fileID: 2786719454837123014}
   m_Layer: 0
-  m_Name: Audio Source - Speed
+  m_Name: Audio Source - Blind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
