@@ -16,21 +16,31 @@ public class BallSpawner : MonoBehaviour
 
     void Start()
     {
-        ServeBall();
+        int rand = Random.Range(0, 10);
+        if (rand < 5)
+        {
+            serveXDirection = -1;
+        }
+        else
+        {
+            serveXDirection = 1;
+        }
+        DelayServe(serveXDirection);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ServeBall();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    ServeBall();
+        //}
     }
 
     public void ServeBall()
     {
         Ball newBall = Instantiate(ballPrefab);
-        newBall.direction = new Vector3(serveXDirection, 0, 0);
+        newBall.direction = new Vector3(serveXDirection, Random.Range(-0.2f, 0.2f), 0);
+        SoundManager.Instance.serve.Play();
     }
 
     public void DelayServe(int newServeXDirection)

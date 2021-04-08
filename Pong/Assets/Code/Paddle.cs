@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     public float verticalMovementSpeed;
-    public float maxYValue;
+    public float maxYPosition;
     public KeyCode _upKey;
     public KeyCode _downKey;
     public int ballhitXDirection;
@@ -19,22 +19,22 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(_upKey) && transform.position.y < maxYValue)
+        if (Input.GetKey(_upKey) && transform.position.y < maxYPosition)
         {
             MoveUp();
         }
-        else if (Input.GetKey(_downKey) && transform.position.y > -maxYValue)
+        else if (Input.GetKey(_downKey) && transform.position.y > -maxYPosition)
         {
             MoveDown();
         }
     }
 
-    void MoveUp()
+    public void MoveUp()
     {
         transform.position += Vector3.up * verticalMovementSpeed * Time.deltaTime;
     }
 
-    void MoveDown()
+    public void MoveDown()
     {
         transform.position += Vector3.down * verticalMovementSpeed * Time.deltaTime;
     }
@@ -44,7 +44,6 @@ public class Paddle : MonoBehaviour
         if (collision.gameObject.GetComponent<Ball>())
         {
             float yHitDirection = (collision.transform.position.y - transform.position.y) * 4;
-            print(yHitDirection);
             Vector3 hitDirection = new Vector3(ballhitXDirection, yHitDirection, 0);
             collision.gameObject.GetComponent<Ball>().GetHit(hitDirection);
         }

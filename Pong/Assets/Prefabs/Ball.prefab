@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 909148984382290894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -96,10 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44b65846e461254eb073461b5a6c5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 4
   direction: {x: -1, y: 0, z: 0}
   maxXPosition: 8.75
-  maxYPosition: 4.8
+  previousXPosition: 0
+  currentXPosition: 0
 --- !u!61 &909148984382290930
 BoxCollider2D:
   m_ObjectHideFlags: 0
