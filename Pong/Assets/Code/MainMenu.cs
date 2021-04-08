@@ -32,22 +32,19 @@ public class MainMenu : MonoBehaviour
 
     void StartForTwoPlayers()
     {
-        PlayerPrefs.SetInt("p1AI", 0);
-        PlayerPrefs.SetInt("p2AI", 0);
+        //TODO: Set up NO AI
         SceneManager.LoadScene(1);
     }
 
     void StartForOnePlayer()
     {
-        PlayerPrefs.SetInt("p1AI", 0);
-        PlayerPrefs.SetInt("p2AI", 1);
+        //TODO: Set up ONE AI
         SceneManager.LoadScene(1);
     }
 
     void StartForZeroPlayers()
     {
-        PlayerPrefs.SetInt("p1AI", 1);
-        PlayerPrefs.SetInt("p2AI", 1);
+        //TODO: Set up TWO AIs
         SceneManager.LoadScene(1);
     }
 }
