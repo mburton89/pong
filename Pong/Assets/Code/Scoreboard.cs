@@ -32,20 +32,26 @@ public class Scoreboard : MonoBehaviour
     {
         p1Score++;
         UpdateText();
-        BallSpawner.Instance.DelayServe(-1);
         p1Paddle.transform.localScale /= 1.25f;
         p2Paddle.transform.localScale *= 1.25f;
         DetermineWinStatus();
+        if (BallSpawner.Instance.gameObject.activeInHierarchy)
+        {
+            BallSpawner.Instance.DelayServe(-1);
+        }
     }
 
     public void GivePointToPlayer2()
     {
         p2Score++;
         UpdateText();
-        BallSpawner.Instance.DelayServe(1);
         p1Paddle.transform.localScale *= 1.25f;
         p2Paddle.transform.localScale /= 1.25f;
         DetermineWinStatus();
+        if (BallSpawner.Instance.gameObject.activeInHierarchy)
+        {
+            BallSpawner.Instance.DelayServe(1);
+        }
     }
 
     void UpdateText()
@@ -61,15 +67,21 @@ public class Scoreboard : MonoBehaviour
         if (p1Score >= maxScore)
         {
             winMessage.SetText("P1 WINS");
-            BallSpawner.Instance.gameObject.SetActive(false);
-            SoundManager.Instance.win.Play();
+            HandleWin();
         }
         if (p2Score >= maxScore)
         {
             winMessage.SetText("P2 WINS");
-            BallSpawner.Instance.gameObject.SetActive(false);
-            SoundManager.Instance.win.Play();
+            HandleWin();
         }
+    }
+
+    void HandleWin()
+    {
+        BallSpawner.Instance.gameObject.SetActive(false);
+        PowerupSpawner.Instance.gameObject.SetActive(false);
+        SoundManager.Instance.win.Play();
+        GameOverMenu.Instance.Activate();
     }
 
     public void BlindPlayers()
