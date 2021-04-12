@@ -2063,7 +2063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'stressfull
+  m_text: 'stressful
 
     pong'
   m_isRightToLeft: 0
