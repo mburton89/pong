@@ -29,6 +29,7 @@ public class Ball : MonoBehaviour
     public void GetHit(Vector3 hitDirection)
     {
         direction = hitDirection;
+        movementSpeed += .1f;
         SoundManager.Instance.hit.Play();
     }
 

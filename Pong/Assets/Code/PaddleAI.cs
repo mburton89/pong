@@ -49,11 +49,11 @@ public class PaddleAI : MonoBehaviour
     {
         if (curentBall.transform.position.y > paddle.transform.position.y + distanceBuffer)
         {
-            paddle.MoveUp();
+            //paddle.MoveUp();
         }
         else if (curentBall.transform.position.y < paddle.transform.position.y - distanceBuffer)
         {
-            paddle.MoveDown();
+            //paddle.MoveDown();
         }
     }
 }

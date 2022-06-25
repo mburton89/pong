@@ -40,7 +40,7 @@ public class PowerupSpawner : MonoBehaviour
         Vector2 spawnPosition = new Vector2(randX, randY);
 
         Powerup powerup = Instantiate(powerups[randIndex], spawnPosition, transform.rotation, transform) as Powerup;
-        Destroy(powerup.gameObject, spawnRate * 2);
+        Destroy(powerup.gameObject, spawnRate * 3);
     }
 
     private IEnumerator SpawnCo()

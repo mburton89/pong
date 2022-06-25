@@ -32,8 +32,8 @@ public class Scoreboard : MonoBehaviour
     {
         p1Score++;
         UpdateText();
-        p1Paddle.transform.localScale /= 1.25f;
-        p2Paddle.transform.localScale *= 1.25f;
+        //p1Paddle.transform.localScale /= 1.25f;
+        //p2Paddle.transform.localScale *= 1.25f;
         DetermineWinStatus();
         if (BallSpawner.Instance.gameObject.activeInHierarchy)
         {
@@ -45,8 +45,8 @@ public class Scoreboard : MonoBehaviour
     {
         p2Score++;
         UpdateText();
-        p1Paddle.transform.localScale *= 1.25f;
-        p2Paddle.transform.localScale /= 1.25f;
+        //p1Paddle.transform.localScale *= 1.25f;
+        //p2Paddle.transform.localScale /= 1.25f;
         DetermineWinStatus();
         if (BallSpawner.Instance.gameObject.activeInHierarchy)
         {
