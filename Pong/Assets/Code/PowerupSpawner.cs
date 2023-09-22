@@ -9,7 +9,7 @@ public class PowerupSpawner : MonoBehaviour
     public float maxX;
     public float maxY;
     public float spawnRate;
-    public List<Powerup> powerups;
+    public List<GameObject> powerups;
 
     void Awake()
     {
@@ -23,11 +23,11 @@ public class PowerupSpawner : MonoBehaviour
 
     public void ClearPowerups()
     {
-        Powerup[] allPowerUps = FindObjectsOfType<Powerup>();
+/*        GameObject[] allPowerUps = FindObjectsOfType<Powerup>();
         foreach (Powerup powerup in allPowerUps)
         {
             Destroy(powerup.gameObject);
-        }
+        }*/
     }
 
     void SpawnRandomPowerup()
@@ -39,7 +39,7 @@ public class PowerupSpawner : MonoBehaviour
 
         Vector2 spawnPosition = new Vector2(randX, randY);
 
-        Powerup powerup = Instantiate(powerups[randIndex], spawnPosition, transform.rotation, transform) as Powerup;
+        GameObject powerup = Instantiate(powerups[randIndex], spawnPosition, transform.rotation, transform);
         Destroy(powerup.gameObject, spawnRate * 2);
     }
 
